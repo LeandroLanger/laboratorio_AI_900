@@ -2,240 +2,111 @@
 
 Neste passo-a-passo, vamos demonstrar o uso do recurso de aprendizado de máquina automatizado no Azure Machine Learning para treinar e avaliar um modelo de aprendizado de máquina. 
 1.	Primeiro vamos criar uma conta no Portal do Azure pelo endereço: https://azure.microsoft.com/pt-br/ e clique na opção Testar o Azure gratuitamente;
+ 
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/601d7be6-9798-402c-bf0c-fb13c6cc41b5)
 
-
 2.	Na pagina para a qual você foi direcionado clique na opção Experimente gratuitamente;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/a620a946-9cd5-46fe-a126-0bd6c24bb774)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 3.	Na proxima pagina para a qual você for direcionado, será necessário criar um breve cadastro com os dados solicitados. O cadastro de um cartão de credito solicitado como forma de validação de identidade, importante excluir os dados após o uso para teste ou antes de terminar os 30 dias;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/1769656b-73ed-4994-a7ef-d40d78bab26d)
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 4.	Após fazer o cadastro e fazer o login, você será direcionado para a pagina inicial semelhante a essa;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5d2771b2-a199-498c-a4cf-b7306bfe2938)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 5.	Caso sua pagina seja diferente em seu primeiro acesso, outro idioma, outras cores, sem menu lateral, você poderá personalizar na opção de configurações;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/1a663126-8435-454b-85eb-d61d76ec90b3)
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/38d448d0-6393-4f86-ab09-02fa01c8e4c2)
 
- 
-
- 
-
-
 6.	Para começar você deve criar um recurso clicando na opção Crie um recurso;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/a7229429-581e-4324-bf05-0d9624a7aeff)
  
-
 7.	Em seguida, na tela aberta, na barra de pesquisa vamos procurar por Machine Learning;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cad9a521-eca2-41ff-8b63-4f7b82851a48)
  
-
 8.	Em seguida escolha a opção encontrada(Azure Machine Learning), termo traduzido na imagem;
+   
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/8770765d-df85-4bb3-becc-ce99938b9291)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 9.	Na tela abrir você deverá clicar na opção Criar;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e644b83e-70d1-449e-9e77-df6d481c85a7)
 
+10.	Na tela que abrirá você deverá fazer as seguintes configurações:
 
+        10.1. Assinatura: sua assinatura do Azure;
+        10.2. Grupo de recursos: Crie ou selecione um grupo de recursos;
 
+![Desafio_1 Imagem_10](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/a28b95e1-89c0-4978-afba-c88cbfe333ac)
 
+![Desafio_1 Imagem_10_1](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/3b031948-404d-4755-8f7e-1640848da067)
 
+        10.3. Nome: Insira um nome exclusivo para seu espaço de trabalho;
+        10.4. Região: Selecione a região geográfica, de preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
+        10.5. Conta de armazenamento: observe a nova conta de armazenamento padrão que será criada para seu espaço de trabalho, geralmente será preenchido automaticamente após escolher um nome, não precisa ser alterado;
+        10.6. Cofre de chaves: Observe o novo cofre de chaves padrão que será criado para seu espaço de trabalho, geralmente será preenchido automaticamente após escolher um nome, não precisa ser alterado;
+        10.7. Insights de aplicativo: observe o novo recurso padrão de insights de aplicativo que será criado para seu espaço de trabalho, geralmente será preenchido automaticamente após escolher um nome, não precisa ser alterado;
+        10.8. Registro de contêiner: Nenhum ( um será criado automaticamente na primeira vez que você implantar um modelo em um contêiner ).
 
-
-
-
-
-
-
-
-
-
-
-
-
-10.	Na tela que abrirá você deverá fazer as seguintes configurações;
-•	Assinatura: sua assinatura do Azure;
-•	Grupo de recursos: Crie ou selecione um grupo de recursos;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/bf1f735b-2f7f-4fb9-bb9e-437614f9b8cf)
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e74784ba-14bf-45d5-a9af-4fafdcc57642)
- 
- 
-
-•	Nome: Insira um nome exclusivo para seu espaço de trabalho .
-•	Região: Selecione a região geográfica, de preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
-•	Conta de armazenamento: observe a nova conta de armazenamento padrão que será criada para seu espaço de trabalho, geralmente será preenchido automaticamente após escolher um nome, não precisa ser alterado;
-•	Cofre de chaves: Observe o novo cofre de chaves padrão que será criado para seu espaço de trabalho, geralmente será preenchido automaticamente após escolher um nome, não precisa ser alterado;
-•	Insights de aplicativo: observe o novo recurso padrão de insights de aplicativo que será criado para seu espaço de trabalho, geralmente será preenchido automaticamente após escolher um nome, não precisa ser alterado;
-•	Registro de contêiner: Nenhum ( um será criado automaticamente na primeira vez que você implantar um modelo em um contêiner ).
-11.	Selecione Revise e crie : Após preencher todos os campos, deve-se clicar no botão Revise + crie para que seja feita a validação. Caso Ocorra algum erro você deve comparar com esse documento para verificar se foi algum campo foi selecionado de maneira incorreta;
+11.	Selecione Revise e crie: Após preencher todos os campos, deve-se clicar no botão Revise + crie para que seja feita a validação. Caso Ocorra algum erro você deve comparar com esse documento para verificar se foi algum campo foi selecionado de maneira incorreta;
+    
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/9c6b4db7-d4e8-480d-8458-cb1d3b36bc2d)
- 
 
 12.	Selecione Crie: Em seguida você deve clicar no botão Crie(Create). Isso pode levar alguns minutos. O ideal é você aguardar na tela aberta para ir acompanhando o processo;
+    
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/7c1ffcd3-8191-4bfd-999e-47d663cfd634)
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/8596cb23-9465-447c-ada5-d1a8a39ad363)
- 
- 
 
-13.	Selecione Ir para Recurso : Após concluído a implantação do recurso você deve clicar em Ir para o recurso;
+13.	Selecione Ir para Recurso: Após concluído a implantação do recurso você deve clicar em Ir para o recurso;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/ba885c43-693a-4399-b5b4-dfd9a36ad927)
- 
 
-
-
-
-
-
-
-
-
-
-
-
-14.	Selecione Launch studio : Após clicar em ir para recurso abrirá a seguinte tela. Nessa tela você deve clicar em Launch studio. Ou vá para o endereço: https://ml.azure.com. Feche todas as mensagens, caso sejam exibidas;
+14.	Selecione Launch studio: Após clicar em ir para recurso abrirá a seguinte tela. Nessa tela você deve clicar em Launch studio. Ou vá para o endereço: https://ml.azure.com. Feche todas as mensagens, caso sejam exibidas;
+    
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/68df4c4e-69ea-4765-aff5-d773aec7330e)
- 
 
-
-
-
-
-
-
-
-
-
-
-15.	Na página que abri, você deverá ver seu espaço de trabalho recém-criado. Caso contrário, selecione Todos os espaços de trabalho no menu à esquerda e selecione o espaço de trabalho que você acabou de criar;
+15.	Na página que abrir, você deverá ver seu espaço de trabalho recém-criado. Caso contrário, selecione Todos os espaços de trabalho no menu à esquerda e selecione o espaço de trabalho que você acabou de criar;
+    
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/3109a5f0-a333-4dd5-863f-df82f9122219)
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/c207b845-f4e2-4bfb-900f-212caf74eca5)
- 
- 
 
 16.	Após ter selecionado o recurso que foi criado, selecione a opção de ML automatizado;
+	
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/fe036f09-4a4e-4ed2-b7de-cab8d4161435)
- 
-
-
-
-
-
-
-
-
-
-
-
 
 17.	 Agora crie um novo trabalho de ML automatizado com as seguintes configurações;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5677ec13-bf83-4caf-8bc9-752d2d1ffa07)
- 
 
+        17.1. Configurações básicas:
+           17.1.1. Nome do trabalho: mslearn-bike-automl;
+           17.1.2. Novo nome do experimento: mslearn-bike-rental;
+           17.1.3. Descrição: Aprendizado de máquina automatizado para previsão de aluguel de bicicletas;
+           17.1.4. Marcas: deixe o valor padrão, não alterar;
 
-
-
-
-
-
-
-
-
-
-
-
-•	Configurações básicas:
-o	Nome do trabalho: mslearn-bike-automl;
-o	Novo nome do experimento: mslearn-bike-rental;
-o	Descrição: Aprendizado de máquina automatizado para previsão de aluguel de bicicletas;
-o	Marcas: deixe o valor padrão, não alterar;
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/aa610662-3b3a-43e0-9878-1e0fa08dd6f0)
  
-
-
-
-
-
-
-
-
-
-
-
-•	Tipo de tarefa e dados:
-o	Selecione o tipo de tarefa: Regressão;
-o	Selecionar conjunto de dados: crie um novo conjunto de dados com as seguintes configurações:
+         17.2. Tipo de tarefa e dados:
+            17.2.1. Selecione o tipo de tarefa: Regressão;
+            17.2.2. Selecionar conjunto de dados: crie um novo conjunto de dados com as seguintes configurações:
+  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e724f6f0-a986-4fa5-ad9b-b6b2a0ce3ef5)
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/53ef1533-1254-4806-b6cf-b3db6b8e2eed)
  
- 
+           17.2.3 Tipo de dados:
+                17.2.3.1. Nome: aluguel de bicicletas(não deixar espaços entre as palavras);
+                17.2.3.2. Descrição: dados históricos de aluguel de bicicletas;
+                17.2.3.3. Tipo: Tabular;
 
-o	Tipo de dados:
-	Nome: aluguel de bicicletas(não deixar espaços entre as palavras);
-	Descrição: dados históricos de aluguel de bicicletas;
-	Tipo: Tabular;
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5290a4bf-8471-4c9d-8843-0965f83cd3b6)
  
 
