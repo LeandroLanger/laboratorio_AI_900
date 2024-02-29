@@ -94,407 +94,212 @@ Neste passo-a-passo, vamos demonstrar o uso do recurso de aprendizado de máquin
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/aa610662-3b3a-43e0-9878-1e0fa08dd6f0)
  
-         17.2. Tipo de tarefa e dados:
-            17.2.1. Selecione o tipo de tarefa: Regressão;
-            17.2.2. Selecionar conjunto de dados: crie um novo conjunto de dados com as seguintes configurações:
+        17.2. Tipo de tarefa e dados:
+           17.2.1. Selecione o tipo de tarefa: Regressão;
+           17.2.2. Selecionar conjunto de dados: crie um novo conjunto de dados com as seguintes configurações:
   
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e724f6f0-a986-4fa5-ad9b-b6b2a0ce3ef5)
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/53ef1533-1254-4806-b6cf-b3db6b8e2eed)
- 
-           17.2.3 Tipo de dados:
-                17.2.3.1. Nome: aluguel de bicicletas(não deixar espaços entre as palavras);
-                17.2.3.2. Descrição: dados históricos de aluguel de bicicletas;
-                17.2.3.3. Tipo: Tabular;
+
+		17.2.3. Tipo de dados:
+  		     17.2.3.1. Nome: aluguel de bicicletas(não deixar espaços entre as palavras);
+	 	     17.2.3.2. Descrição: dados históricos de aluguel de bicicletas;
+		     17.2.3.3. Tipo: Tabular;
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5290a4bf-8471-4c9d-8843-0965f83cd3b6)
  
-
-
-
-
-
-
-
-
-
-
-
-o	Fonte de dados:
-	Selecione Dos arquivos da web, e clique em avançar;
+ 		17.2.4. Fonte de dados:
+   		     17.2.4.1 Selecione Dos arquivos da web, e clique em avançar;
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/57b168c6-dbb2-4cf9-ac44-d1a8373d48ac)
 
-
-
-
-
-
-
-
-
-
-
-
-
-o	URL da Web:
-	URL da Web: use o endereço no campo URL da Web https://aka.ms/bike-rentals;
-	Ignorar validação de dados: não selecionar. Em seguida clique em avançar;
+		17.2.5. URL da Web:
+		     17.2.5.1. URL da Web: use o endereço no campo URL da Web https://aka.ms/bike-rentals;
+		     17.2.5.2. Ignorar validação de dados: não selecionar. Em seguida clique em avançar;
+	
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/c7a78c08-f74b-4902-a1bb-5860ed6f3c94)
 
-
-
-
-
-
-
-
-
-
-
-
-o	Configurações :
-	Formato de arquivo: Delimitado;
-	Delimitador: Vírgula;
-	Codificação: UTF-8;
-	Cabeçalhos de coluna: apenas o primeiro arquivo possui cabeçalhos;
-	Pular linhas: Nenhum;
+		17.2.6. Configurações:
+  		     17.2.6.1. Formato de arquivo: Delimitado;
+  		     17.2.6.2. Delimitador: Vírgula;
+	 	     17.2.6.3. Codificação: UTF-8;
+		     17.2.6.4. Cabeçalhos de coluna: apenas o primeiro arquivo possui cabeçalhos;
+		     17.2.6.5. Pular linhas: Nenhum;
+  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/372081d4-4da1-4611-a4da-aade72248071)
  
-
-
-
-
-
-
-
-
-
-
-	O conjunto de dados contém dados multilinhas: não selecione;
+		     17.2.6.6. O conjunto de dados contém dados multilinhas: não selecione;
+  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/c2ec7bd6-96fb-41c9-934b-8b91aae1c630)
- 
-o	Esquema:
-	Incluir todas as colunas exceto Caminho(Path);
-	Revise os tipos detectados automaticamente;
+
+		17.2.7. Esquema:
+		     17.2.7.1.Incluir todas as colunas exceto Caminho(Path);
+		     17.2.7.2. Revise os tipos detectados automaticamente;
+  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/29d0157c-c015-47b6-8e51-dfd69bf4a9d5)
  
 
 18.	Selecione Criar. Após a criação do conjunto de dados, selecione o conjunto de dados de aluguel de bicicletas para continuar a enviar o trabalho de ML automatizado.
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cfb17f16-f59d-414f-b0a6-5618fa81a741)
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cad875e7-a3c0-4798-972c-3ebe54a1b1f9)
- 
- 
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cfb17f16-f59d-414f-b0a6-5618fa81a741)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cad875e7-a3c0-4798-972c-3ebe54a1b1f9)
 
 19.	Em seguida selecione a tabela criada (alugueldebicicletas) e clique em avançar:
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/58011105-350b-4ea1-834c-e780445e52ca)
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Configurações de tarefa:
-•	Tipo de tarefa: Regressão;
-•	Conjunto de dados: aluguel de bicicletas;
-•	Coluna de destino: Aluguéis (inteiro);
+	    19.1. Configurações de tarefa:
+	       19.1.1. Tipo de tarefa: Regressão;
+	       19.1.2. Conjunto de dados: aluguel de bicicletas;
+	       19.1.3. Coluna de destino: Aluguéis (inteiro);
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6ccca902-7430-4a95-8bae-01e8b90700a8)
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cbc84d01-101c-4581-bbc3-fbeba1384aaa)
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cbc84d01-101c-4581-bbc3-fbeba1384aaa)
  
- 
-•	Configurações adicionais: expandir essa opção;
+	       19.1.4. Configurações adicionais: expandir essa opção;
+      
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/69b49b70-cd9d-4f35-8858-08ed7421eb3f)
  
-
-o	Métrica primária: raiz do erro quadrático médio normalizado;
+		     19.1.4.1. Métrica primária: raiz do erro quadrático médio normalizado;
+  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/04bd8b73-5934-4a0e-afb8-d66bcee1d83b)
  
-o	Explique o melhor modelo: Não selecionado;
-o	Usar todos os modelos suportados: Desmarcado . Você restringirá o trabalho para tentar apenas alguns algoritmos específicos;
+		     19.1.4.2. Explique o melhor modelo: Não selecionado;
+		     19.1.4.3. Usar todos os modelos suportados: Desmarcado . Você restringirá o trabalho para tentar apenas alguns algoritmos específicos;
+  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/b5079906-9464-4a38-b63f-34e02e3d8c12)
 
-
-
-
-
-
-
-
-
-
-
-
-o	Modelos permitidos: Selecione apenas RandomForest e LightGBM - normalmente você gostaria de tentar o máximo possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho;
+		     19.1.4.4. Modelos permitidos: Selecione apenas RandomForest e LightGBM - normalmente você gostaria de tentar o máximo possível, mas cada modelo adicionado aumenta o tempo necessário para executar o trabalho;
+   
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/8047ec80-2eac-452e-bfe2-860fa4165e51)
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/cbf3a97d-12bd-4f94-9c1d-abcebaaade92)
  
- 
-	Depois clique em salvar para gravar as opções selecionadas;
+ 		     19.1.4.5. Depois clique em salvar para gravar as opções selecionadas;
+
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/b4f98e53-5ab1-46cb-a3b7-c4b1bfc7e39f)
+
+	       19.1.5. Limites: expanda esta seção:
+		    19.1.5.1. Máximo de testes: 3;
+		    19.1.5.2. Máximo de testes simultâneos: 3;
+		    19.1.5.3. Máximo de nós: 3;
+		    19.1.5.4. Limite de pontuação da métrica: 0,085 (se um modelo atingir uma pontuação da métrica de erro quadrático médio normalizado de 0,085 ou menos, o trabalho termina);
+		    19.1.5.5. Tempo limite: 15;
+		    19.1.5.6. Tempo limite de iteração: 15;
+		    19.1.5.7. Habilitar rescisão antecipada: selecionado;
+
+![Desafio_1 Imagem_19_10](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/38077226-90d8-49e3-839a-def241685e04)
+
+	       19.1.6. Validação e teste:
+		    19.1.6.1. Tipo de validação: altere o campo para: divisão de validação de treinamento;
+      
+![Desafio_1 Imagem_19_11](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/a03d7b49-a910-4121-9775-9e70411e6b9e)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/17c915c3-ffbb-4b41-8fd9-1bfa9ffcdbc8)
+
+		    19.1.6.2. Porcentagem de dados de validação: 10;
+		    19.1.6.3. Conjunto de dados de teste: Nenhum;
+		    19.1.6.4. Clique em avançar para prosseguir;
+      
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/a748c2ba-f073-4837-b22c-e00371614bf5)
+
+	     19.2. Computação:
+		19.2.1. Selecione o tipo de computação: sem servidor;
+		19.2.2. Tipo de máquina virtual: CPU;
+		19.2.3. Camada de máquina virtual: Dedicada;
+		19.2.4. Tamanho da máquina virtual: Standard_DS3_V2*;
+		19.2.5. Número de instâncias: 1;
+  		19.2.6. Clique em avançar;
+  
+  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6571702b-a966-4394-9a45-4f45ab5fc3c4)
+
+20.	Agora clique em Enviar o trabalho de treinamento. Ele inicia automaticamente.
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/0e8a71f1-cd18-43ca-b2e3-4c1ac8bac45b)
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-•	Limites: expanda esta seção
-o	Máximo de testes: 3;
-o	Máximo de testes simultâneos: 3;
-o	Máximo de nós: 3;
-o	Limite de pontuação da métrica: 0,085 (se um modelo atingir uma pontuação da métrica de erro quadrático médio normalizado de 0,085 ou menos, o trabalho termina);
-o	Tempo limite: 15;
-o	Tempo limite de iteração: 15;
-o	Habilitar rescisão antecipada: selecionado;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/45da63f0-ffc2-4052-9cf8-0d11842533bc)
- 
-
-
-
-
-
-
-
-
-•	Validação e teste :
-o	Tipo de validação: altere o campo para: divisão de validação de treinamento;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/71052a76-509f-4a7c-8fde-c5e33c5cf48d)
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/25ef122a-295d-4cc4-ab22-4d81785ec023)
- 
- 
-
-o	Porcentagem de dados de validação: 10;
-o	Conjunto de dados de teste: Nenhum;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/c3b5d529-00c2-4904-847a-22b087c2d30c)
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Computação:
-•	Selecione o tipo de computação: sem servidor;
-•	Tipo de máquina virtual: CPU;
-•	Camada de máquina virtual: Dedicada;
-•	Tamanho da máquina virtual: Standard_DS3_V2*;
-•	Número de instâncias: 1;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/d716cb36-1488-42e0-b092-039d2032cd81)
- 
-
-
-
-
-
-
-
-
-
-
-20.	Envie o trabalho de treinamento. Ele inicia automaticamente.
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/9daf09e6-3f93-43bd-b873-a125ddc00256)
- 
-
 21.	Espere o trabalho terminar. Pode demorar um pouco;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e4c2d6a4-6734-4526-a0dd-2e20614535a2)
- 
+
+ ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/9424239a-a8bb-4f11-b320-10ab4e4baa9a)
 
 22.	Quando o trabalho automatizado de aprendizado de máquina for concluído, você poderá revisar o melhor modelo treinado.
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/8912781f-95cf-42d1-aa1a-4a1e04dad0b6)
- 
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/63a2c503-8621-46b8-9261-e83979c0bcc4)
+ 
 23.	Depois de conquido você seleciona o nome do experimento para exibir mais detalhes;
-![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/f1b3dbf7-5b1e-44f8-8611-80e458f4964e)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/37d1cbef-d0ff-479a-a5e7-3851e6e27fa9)
  
-
-
 24.	Caso você tenha saído da tela enquanto a tarefa não tenha esteja completa, você acessar o menu lateral na opção Tarefas(Jobs);
-![Uploading image.png…]()
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/f7e4dc62-a2c4-4e3f-9cd6-83d7a26e8b91)
  
+	     24.1. Selecione o nome do experimento e clique sobre ele;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-•	Selecione o nome do experimento e clique sobre ele;
-![Uploading image.png…]()
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/d3f93815-984f-4cf5-9dfd-88d055d9afcd)
  
-•	Clique para expandir e exibir os detalhes;
-![Uploading image.png…]()
+	     24.2. Clique para expandir e exibir os detalhes;
  
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/8637eaad-9032-4969-9671-26a1c9a3262c)
 
-
-•	Aqui é exibido todos o histórico de como ele foi concluído;
-![Uploading image.png…]()
+	     24.3. Aqui é exibido todos o histórico de como ele foi concluído;
  
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/369c2857-1951-408c-9991-e8ca1a5b9f2a)
 
-•	Agora volte para a tela anterior e clique sobre o nome;
-![Uploading image.png…]()
- 
+	     24.4. Agora volte para a tela anterior e clique sobre o nome;
+     
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/16c1e0a4-88d1-41d4-9cd3-6d16bbeefd74)
 
-•	selecione o melhor modelo treinado e clique sobre ele;
-![Uploading image.png…]()
+	     24.5. Selecione o melhor modelo treinado e clique sobre ele;
 
- 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/fb9c5d7a-3458-49e5-a30e-cfc89e3a3972)
 
+	     24.6. Clique sobre Implatar e escolha Serviço Web;
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/d071041e-5871-4802-98e6-8d8ac46f4b07)
 
+	     24.7. Faça as seguintes configurações:
+	   	24.7.1. Nome: prever-aluguéis;
+	   	24.7.2. Descrição: Prever aluguel de bicicletas;
+	   	24.7.3. Tipo de computação: Instância de Contêiner do Azure;
+	   	24.7.4. Habilitar autenticação: selecionado;
+	   	24.7.5. Clique em implantar;
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/99e7ab27-c910-4b29-9cab-8f7d1ca617aa)
 
+	     24.8. Aguarde o início da implantação – isso pode levar alguns segundos. O status de implantação(prever-alugueis) será indicado na parte principal da página como em execução;
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/faeb41d4-c9cd-4c37-84ef-38914a9ffc52)
 
+	     24.9. Aguarde até que o status da implantação mude para concluído com êxito . Isso pode levar alguns minutos;
 
-
-
-
-
-
-
-
-•	Clique sobre Implatar e escolha Serviço Web;
-![Uploading image.png…]()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-•	Faça as seguintes configurações:
-o	Nome : prever-aluguéis
-o	Descrição : Prever aluguel de bicicletas
-o	Tipo de computação : Instância de Contêiner do Azure
-o	Habilitar autenticação : selecionado
-o	Clique em implantar
-![Uploading image.png…]()
-
-![Uploading image.png…]()
- 
-
-
-
-
-
-
-
-
-
-
-
-
-•	Aguarde o início da implantação – isso pode levar alguns segundos. O status de implantação(prever-alugueis) será indicado na parte principal da página como em execução;
- ![Uploading image.png…]()
-
-
-
-
-
-
-
-
-
-
-
-
-•	Aguarde até que o status da implantação mude para concluído com êxito . Isso pode levar alguns minutos;
-![Uploading image.png…]()
- 
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/da27cb75-13b0-48ad-bafd-328c77cbbc54)
 
 25.	Agora vamos testar nosso modelo. No menu lateral clique na guia Pontos de extremidade;
-![Uploading image.png…]()
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/0b010329-4abe-4f58-b9d6-02f1ab04e342)
  	
-•	Agora selecione o ponto extremidade prever-alugueis;
- ![Uploading image.png…]()
+	     25.1. Agora selecione o ponto extremidade prever-alugueis;
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5e566656-dfd5-4c6c-b96b-ccc0db15eab8)
 
+	     25.2. No menu da próxima tela selecione a opção testar;
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/397950fd-976b-4d9a-ab4f-fa460c3de085)
+ 
+	     25.3. Na próxima tela vamos substituir o modelo JSON sugerido;
 
-•	No menu da próxima tela selecione a opção testar;
-![Uploading image.png…]()
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/70848198-ae55-498e-923e-46ad4f10f073)
  
 
-•	Na próxima tela vamos substituir o modelo JSON;
-![Uploading image.png…]()
+	     25.4. Agora vamos substituir o modelo JSON pelos seguintes dados de entrada e clicar em Testar:
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/ea69a64d-5e2c-451d-8e64-7adf463d1daf)
  
+	     25.5. Os resultados deste teste, que incluem um número previsto de aluguéis com base nos recursos de entrada - semelhante a este;
 
-•	Agora vamos substituir o modelo JSON pelos seguintes dados de entrada e clicar em Testar:
-![Uploading image.png…]()
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-•	Os resultados deste teste, que incluem um número previsto de aluguéis com base nos recursos de entrada - semelhante a este;
-![Uploading image.png…]()
- 
-
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/eaa1a843-0da5-43e3-a6ca-9cf3f1ccc850)
 
 26.	Resultado: o painel de teste pegou os dados de entrada e usou o modelo treinado para retornar o número previsto de aluguéis.
 
