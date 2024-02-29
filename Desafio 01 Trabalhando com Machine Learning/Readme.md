@@ -1,6 +1,4 @@
-
-
-Neste passo-a-passo, vamos demonstrar o uso do recurso de aprendizado de máquina automatizado no Azure Machine Learning para treinar e avaliar um modelo de aprendizado de máquina. 
+### Neste passo-a-passo, vamos demonstrar o uso do recurso de aprendizado de máquina automatizado no Azure Machine Learning para treinar e avaliar um modelo de aprendizado de máquina. 
 1.	Primeiro vamos criar uma conta no Portal do Azure pelo endereço: https://azure.microsoft.com/pt-br/ e clique na opção Testar o Azure gratuitamente;
  
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/601d7be6-9798-402c-bf0c-fb13c6cc41b5)
@@ -303,4 +301,31 @@ Neste passo-a-passo, vamos demonstrar o uso do recurso de aprendizado de máquin
 
 26.	Resultado: o painel de teste pegou os dados de entrada e usou o modelo treinado para retornar o número previsto de aluguéis.
 
+27.	O serviço web que você criou está hospedado em uma instância de contêiner do Azure . Se você não pretende usá-lo mais, é recomendado  eliminar o ponto extremidade para evitar acumular utilização desnecessária do Azure.
+    
+	    27.1. No estúdio Azure Machine Learning , na guia ponto extremidade, selecione o ponto de extremidade de previsão de aluguel. Em seguida, selecione Excluir e confirme que deseja excluir o ponto extremidade.
 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/ed7df49b-c0a0-4a39-b2ff-331c1971943f)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/179bfed1-47a7-4ac6-826a-c3b26652affe)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/bb3bf4a7-bdbf-46c2-90c5-baa55473396e)
+
+28.	Excluir sua computação garante que sua assinatura não será cobrada por recursos de computação. No entanto, será cobrada uma pequena quantia pelo armazenamento de dados, desde que o espaço de trabalho do Azure Machine Learning exista na sua assinatura. Se tiver terminado de explorar o Azure Machine Learning, poderá eliminar o espaço de trabalho Azure Machine Learning e os recursos associados.
+
+	     28.1. Para excluir seu espaço de trabalho:
+   	        28.1.1. No portal Azure(https://portal.azure.com/), na página Grupos de recursos, clique sobre o grupo de recursos que especificou ao criar o seu espaço de trabalho Azure Machine Learning.
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/2a4d6635-a3bf-4939-9b2f-0a386a9ffdb1)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/65aafc09-8e61-4567-9f5a-584d2bab2a98)
+
+		28.1.2.	Clique sobre o recurso que deseja excluir , em seguida escolha a opção delete. Para confirmar que deseja excluí-lo e selecione Excluir.
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/59a5ba3d-70bd-4822-a070-40fbd7f2510f)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/dc55a21f-e03d-4fb5-b50c-08e798fa8bd9)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/623f2d50-de0d-494b-b3de-a559bdbf4eb3)
+
+29.	Este foi o passo-a-passo, para demonstrar como eu fiz o uso do recurso de aprendizado de máquina automatizado no Azure Machine Learning e para treinar e avaliar um modelo de aprendizado de máquina. Desde a criação da conta no portal azure até o teste do modelo implantado.
