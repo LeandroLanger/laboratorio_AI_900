@@ -27,11 +27,11 @@ Depois você deve criar um recurso clicando na opção Crie um recurso;
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/607c423f-bacc-4e42-ba7d-0bdce55f5da4)
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/c271f0fd-b6ff-441e-aea3-92ff01cd7161)
 
-      4.3.  Região: Selecione a região geográfica, de preferencialmente alguma região dos EUA, 
-    pois os recurso do Brasil geralmente são mais caros;  	    
-4.4.  Nome: Insira um nome exclusivo;   
+    4.3.  Região: Selecione a região geográfica, de preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
+      
+    4.4.  Nome: Insira um nome exclusivo;   
 
-4.5.  Nível de preços: Padrão S0;
+    4.5.  Nível de preços: Padrão S0;
     
     4.6.  Ao marcar esta caixa, confirmo que li e compreendi todos os termos abaixo: Selecionado;
   
@@ -45,6 +45,7 @@ Depois você deve criar um recurso clicando na opção Crie um recurso;
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/866ddbea-dc97-49a1-bef8-ef20d94ac64e)
 
 5.	Após concluída a etapa anterior você deve conectar ao recurso de serviços de IA do Azure provisionado acima ao Vision Studio pelo endereço https://portal.vision.cognitive.azure.com. 
+
 6.	Entre com sua conta e certifique-se de usar o mesmo diretório onde você criou seu recurso de serviços de IA do Azure.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/ce40d62d-238b-49cf-9450-3f96a05e8a5d)
