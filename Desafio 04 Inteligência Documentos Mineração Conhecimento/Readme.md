@@ -1,32 +1,47 @@
+<h1 align= "center">
+  <strong>
 Explorando um índice do Azure AI Search (UI)
+  </strong>
+</h1>
+
 
 Neste desafio vamos imaginar que você trabalha em uma rede nacional de cafés. Foi solicitado para que você ajude a criar uma solução de mineração de conhecimento que facilite a busca de insights sobre as experiências dos clientes. Você decide criar um índice do Azure AI Search usando dados extraídos de avaliações de clientes.
 
 1.	Neste desafio precisaremos:
 
-1.1.	Criar recursos do Azure;
+        1.1.	Criar recursos do Azure;
+  	
+        1.2.	Extrair dados de uma fonte de dados;
+  	
+        1.3.	Enriquecer os dados com habilidades da IA;
+  	
+        1.4.	Utilizar o indexador do Azure no portal do Azure;
+  	
+        1.5.	Consultar seu índice de pesquisa;
+  	
+        1.6.	Revisar os resultados salvos no armazenamento de conhecimento.
 
-1.2.	Extrair dados de uma fonte de dados;
+<h3>
+  <strong>
+ Recursos do Azure necessários
+  </strong>
+</h3>
 
-1.3.	Enriquecer os dados com habilidades da IA;
-
-1.4.	Utilizar o indexador do Azure no portal do Azure;
-
-1.5.	Consultar seu índice de pesquisa;
-
-1.6.	Revisar os resultados salvos no armazenamento de conhecimento.
-
-Recursos do Azure necessários
 
 2.	Para o nosso desafio vamos criar os seguintes recursos do Azure:
 
-2.1.	Um recurso do Azure AI Search, que gerenciará a indexação e a consulta;
+        2.1.	Um recurso do Azure AI Search, que gerenciará a indexação e a consulta;
 
-2.2.	Um recurso de serviços de IA do Azure, que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados pela IA;
+        2.2.	Um recurso de serviços de IA do Azure, que fornece serviços de IA para habilidades que sua solução de pesquisa pode usar para enriquecer os dados na fonte de dados com insights gerados pela IA;
 
-2.3.	Uma conta de armazenamento com contêineres de blobs, que armazenará documentos brutos e outras coleções de tabelas, objetos ou arquivos.
+        2.3.	Uma conta de armazenamento com contêineres de blobs, que armazenará documentos brutos e outras coleções de tabelas, objetos ou arquivos.
 
-Criando um recurso do Azure AI Search
+<h2 align= "center">
+  <strong>
+ Criando um recurso do Azure AI Search
+  </strong>
+</h2>
+
 
 3.	Acesse o portal do Azure pelo endereço https://portal.azure.com;
 4.	Clique sobre + Criar um recurso;
@@ -44,32 +59,37 @@ Criando um recurso do Azure AI Search
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/fd437546-f8f6-43ed-a62e-4b975803e9ee)
 
 
-6.1.	Assinatura: use a sua assinatura do Azure;
+        6.1.	Assinatura: use a sua assinatura do Azure;
 
-6.2.	Grupo de recursos: selecione ou crie um grupo de recursos com um nome exclusivo;
+        6.2.	Grupo de recursos: selecione ou crie um grupo de recursos com um nome exclusivo;
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/852702cf-26a3-4f4f-9122-989953e22bd2)
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5b868f2a-4471-474a-bf94-4f7dae9e2445)
 
-6.3.	Nome do serviço: um nome exclusivo;
+        6.3.	Nome do serviço: um nome exclusivo;
 
-6.4.	Localização: Selecione a região geográfica, preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
+        6.4.	Localização: Selecione a região geográfica, preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
 
-6.5.	Nível de preços: altere a opção padrão para Básico;
+        6.5.	Nível de preços: altere a opção padrão para Básico;
 
-6.6.	Selecione Review + create;
+        6.6.	Selecione Review + create;
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/7d888f77-d7b5-4913-a0c3-484dce64fcb7)
 
-6.7.	Aguarde a até a que seja feita validação e apareça a mensagem de Validação com Sucesso(Validation Success), depois selecione Criar(Create) e aguarde a conclusão da implantação;
+        6.7.	Aguarde a até a que seja feita validação e apareça a mensagem de Validação com Sucesso(Validation Success), depois selecione Criar(Create) e aguarde a conclusão da implantação;
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e7daabe4-6ec1-44fa-9e01-e56e319a099c)
 
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/d7553d7c-f6cb-49f6-be8d-e3d6452ea2ed)
 
-Criando um recurso de serviços de IA do Azure
+<h2 align= "center">
+  <strong>
+ Criando um recurso de serviços de IA do Azure
+  </strong>
+</h2>
+
 
 7.	Vamos precisar provisionar um recurso de serviços de IA do Azure que esteja no mesmo local que seu recurso do Azure AI Search. Sua solução de pesquisa usará esse recurso para enriquecer os dados no armazenamento de dados com insights gerados por IA.
 8.	Acesse o portal do Azure pelo endereço https://portal.azure.com e localize a opção + Criar um recurso e clique sobre ela;
@@ -85,32 +105,37 @@ Criando um recurso de serviços de IA do Azure
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/f08ffeee-2d1f-402d-aa03-9a786d9ef60b)
  
 11.	 Na tela que abrirá você deverá fazer as seguintes configurações;
-
-11.1.	Assinatura: sua assinatura do Azure;
-
-11.2.	Grupo de recursos: selecione o mesmo grupo de recursos que foi  criado no recurso do Azure AI Search;
+    
+         11.1.	Assinatura: sua assinatura do Azure;
+        
+         11.2.	Grupo de recursos: selecione o mesmo grupo de recursos que foi  criado no recurso do Azure AI Search;
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/12efb524-9c4d-4279-946f-07642fdb3503)
  
-11.3.	Região: Selecione a região geográfica, preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
+        11.3.	Região: Selecione a região geográfica, preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
 
-11.4.	Nome: Insira um nome exclusivo;
+        11.4.	Nome: Insira um nome exclusivo;
 
-11.5.	Nível de preços: Padrão S0;
+        11.5.	Nível de preços: Padrão S0;
 
-11.6.	Ao marcar esta caixa, confirmo que li e compreendi todos os termos abaixo: Selecionado;
+        11.6.	Ao marcar esta caixa, confirmo que li e compreendi todos os termos abaixo: Selecionado;
 
-11.7.	Após preencher todos os campos, deve-se clicar no botão Revise + crie.
+        11.7.	Após preencher todos os campos, deve-se clicar no botão Revise + crie.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/a2cb4164-6bcf-46dc-9357-391f4233ddec)
 
-11.8.	Em seguida clique em Create(Criar) e aguarde a conclusão da implantação.
+        11.8.	Em seguida clique em Create(Criar) e aguarde a conclusão da implantação.
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/9e8c74a4-8c08-4739-8006-ca467b96a7e9)
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/bdd94433-1159-4b81-b14f-56fa3e4194bc)
 
-Criando uma conta de armazenamento
+<h2 align= "center">
+  <strong>
+ Criando uma conta de armazenamento
+  </strong>
+</h2>
+
 
 12.	 Acesse novamente portal do Azure pelo endereço https://portal.azure.com e localize a opção + Criar um recurso e clique sobre ela;
 
@@ -124,27 +149,27 @@ Criando uma conta de armazenamento
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/f6e4ee1f-41a7-4edd-b3ee-cbdbacdd19a3)
  
-13.1.	Assinatura: sua assinatura do Azure;
+        13.1.	Assinatura: sua assinatura do Azure;
 
-13.2.	Grupo de recursos: Iremos escolher o mesmo grupo de recursos que usamos para criar  os recursos do Azure AI Search e dos serviços Azure AI;
+        13.2.	Grupo de recursos: Iremos escolher o mesmo grupo de recursos que usamos para criar  os recursos do Azure AI Search e dos serviços Azure AI;
 
-13.3.	Nome da conta de armazenamento: escolha um nome exclusivo;
+        13.3.	Nome da conta de armazenamento: escolha um nome exclusivo;
 
-13.4.	Localização: Selecione a região geográfica, preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
+        13.4.	Localização: Selecione a região geográfica, preferencialmente alguma região dos EUA, pois os recurso do Brasil geralmente são mais caros;
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6e020b0f-cfda-41fb-b53e-d124fa11ff6a)
  
-13.5.	Desempenho: selecione Padrão(Standard);
+        13.5.	Desempenho: selecione Padrão(Standard);
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/1c92e768-e91e-4303-ab50-a4e78b42194f)
  
-13.6.	Redundância: escolha a opção Armazenamento localmente redundante (LRS). Clique em Revisar + Criar(Review + Create) e aguarde a próxima tela;
+        13.6.	Redundância: escolha a opção Armazenamento localmente redundante (LRS). Clique em Revisar + Criar(Review + Create) e aguarde a próxima tela;
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/62661ec1-18ec-40ba-ac84-dda07db82d7b)
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/11af0c20-9b9e-415d-9b0a-a2ae24aba285)
  
-13.7.	Clique em Criar (Create) e aguarde a conclusão da implantação e vá para o recurso implantado.
+        13.7.	Clique em Criar (Create) e aguarde a conclusão da implantação e vá para o recurso implantado.
  
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/024402a8-6c6f-420c-9ac4-01cd5d9d1189)
 
@@ -156,11 +181,16 @@ Criando uma conta de armazenamento
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/af9c50e3-f482-4833-a100-5d7009cce358)
 
-14.1.	Altere a configuração de Permitir acesso anônimo de Blob para Habilitado e selecione Salvar.
+        14.1.	Altere a configuração de Permitir acesso anônimo de Blob para Habilitado e selecione Salvar.
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/d39a67b6-1c5f-4bdf-a67f-e74b4675532a)
 
-Carregando documentos para o armazenamento do Azure
+<h2 align= "center">
+  <strong>
+ Carregando documentos para o armazenamento do Azure
+  </strong>
+</h2>
+
 
 15.	No menu esquerdo, selecione Containers.
 
@@ -174,11 +204,11 @@ Carregando documentos para o armazenamento do Azure
 
 17.	Insira as seguintes configurações e clique em Criar:
 
-17.1.	Nome: escolha um nome;
+        17.1.	Nome: escolha um nome;
 
-17.2.	Nível de acesso público: Container (acesso de leitura anônimo para containers e blobs);
+        17.2.	Nível de acesso público: Container (acesso de leitura anônimo para containers e blobs);
 
-17.3.	Avançado: sem alterações.
+        17.3.	Avançado: sem alterações.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/67e8fcc0-fe6f-4f3f-adb1-da163f08c7cf)
  
@@ -202,9 +232,16 @@ Carregando documentos para o armazenamento do Azure
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/b07fa804-c41d-49ba-aa46-c8a10e3d022b)
 
-Indexando os documentos
+<h3>
+  <strong>
+ Indexando os documentos
+  </strong>
+ 
+</h3>
+
 
 Depois de armazenar os documentos, você poderá usar o Azure AI Search para extrair insights dos documentos. O portal do Azure fornece um assistente de importação de dados. Com este assistente, você pode criar automaticamente um índice e um indexador para fontes de dados suportadas. Você usará o assistente para criar um índice e importar seus documentos de pesquisa do armazenamento para o índice do Azure AI Search.
+
 23.	No portal do Azure, navegue até o recurso Azure AI Search. Na página Visão geral, selecione Importar dados.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/4ba24f44-65ec-4f22-b4cd-2dda680e04f3)
@@ -217,17 +254,17 @@ Depois de armazenar os documentos, você poderá usar o Azure AI Search para ext
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/dfcba13f-d518-4124-8c60-729941c6e7b4)
  
-24.1.	Fonte de dados: Armazenamento de Blobs do Azure(Azure Blob Storage);
+        24.1.	Fonte de dados: Armazenamento de Blobs do Azure(Azure Blob Storage);
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5605eda9-c194-4a41-945f-1ace23740191)
 
-24.2.	Nome da fonte de dados: coffee-customer-data;
+        24.2.	Nome da fonte de dados: coffee-customer-data;
 
-24.3.	Dados a extrair: Conteúdo e metadados;
+        24.3.	Dados a extrair: Conteúdo e metadados;
 
-24.4.	Modo de análise: Padrão;
+        24.4.	Modo de análise: Padrão;
 
-24.5.	Cadeia de conexão: *Selecione Escolha uma conexão existente. Selecione sua conta de armazenamento, selecione o contêiner que você criou e clique em Selecionar;
+        24.5.	Cadeia de conexão: *Selecione Escolha uma conexão existente. Selecione sua conta de armazenamento, selecione o contêiner que você criou e clique em Selecionar;
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/0a1ea3ab-e4c7-4ace-b256-6344de187e71)
 
@@ -235,13 +272,13 @@ Depois de armazenar os documentos, você poderá usar o Azure AI Search para ext
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/de4cf6f2-0d80-47b6-8baf-d30c222273ce)
  
-24.6.	Autenticação de identidade gerenciada: Nenhuma;
+        24.6.	Autenticação de identidade gerenciada: Nenhuma;
 
-24.7.	Nome do contêiner: esta configuração é preenchida automaticamente depois que você escolhe uma conexão existente;
+        24.7.	Nome do contêiner: esta configuração é preenchida automaticamente depois que você escolhe uma conexão existente;
 
-24.8.	Pasta Blob: deixe em branco;
+        24.8.	Pasta Blob: deixe em branco;
 
-24.9.	Descrição: Opcional.
+        24.9.	Descrição: Opcional.
 
 25.	Selecione Próximo: Adicionar habilidades cognitivas (opcional). Aguarde até finalizar a validação.
 
@@ -257,17 +294,17 @@ Depois de armazenar os documentos, você poderá usar o Azure AI Search para ext
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6b9aa9a0-64c9-4677-9b36-a48d06c3a36a)
 
-27.1.	Altere o nome da qualificação; 
+        27.1.	Altere o nome da qualificação; 
 
-27.2.	Marque a caixa de seleção Habilitar OCR e o Campo de dados de origem selecione como conteúdo_mesclado (merged_content);
+        27.2.	Marque a caixa de seleção Habilitar OCR e o Campo de dados de origem selecione como conteúdo_mesclado (merged_content);
 
-27.3.	Certifique-se de que o campo Dados de origem esteja configurado como merged_content e altere o nível de granularidade de enriquecimento para Páginas (blocos de 5.000 caracteres);
+        27.3.	Certifique-se de que o campo Dados de origem esteja configurado como merged_content e altere o nível de granularidade de enriquecimento para Páginas (blocos de 5.000 caracteres);
 
-27.4.	Não habilite o campo Habilitar enriquecimento incremental;
+        27.4.	Não habilite o campo Habilitar enriquecimento incremental;
 
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6ab8edc2-1eed-48b9-b539-cc26c990aa1b)
 
-27.5.	Selecione os seguintes campos enriquecidos:
+        27.5.	Selecione os seguintes campos enriquecidos:
 Habilidade Cognitiva	Parâmetro	Nome do campo
 Extraia nomes de locais	 	Localizações
 Extraia frases-chave	 	frases chave
@@ -283,13 +320,13 @@ Gere legendas de imagens	 	legenda da imagem
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/7fc7e55a-a176-4854-b1a7-6380ae45a56f)
  
-28.1.	Projeções de imagem. Caso apareça um aviso solicitando uma cadeia de conexão de conta de armazenamento;
+        28.1.	Projeções de imagem. Caso apareça um aviso solicitando uma cadeia de conexão de conta de armazenamento;
 
-28.1.1.	Escolha uma conexão existente . Escolha a conta de armazenamento que você criou anteriormente;
+            28.1.1.	Escolha uma conexão existente . Escolha a conta de armazenamento que você criou anteriormente;
 
-28.1.2.	Clique em +Recipiente(+ Container) para criar um novo contêiner dando a ele um nome com o nível de privacidade definido como Privado(Private) e selecione Criar(Create);
+            28.1.2.	Clique em +Recipiente(+ Container) para criar um novo contêiner dando a ele um nome com o nível de privacidade definido como Privado(Private) e selecione Criar(Create);
 
-28.1.3.	Selecione o contêiner que você acabou de criar e clique em Selecionar na parte inferior da tela;
+            28.1.3.	Selecione o contêiner que você acabou de criar e clique em Selecionar na parte inferior da tela;
 
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/36857a94-1c39-43e9-8a0b-126314e0e710)
 
@@ -305,17 +342,17 @@ Gere legendas de imagens	 	legenda da imagem
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/e60c9b6a-3033-43fa-a61f-4d24c87f7fc4)
 
-28.2.	Documentos;
+        28.2.	Documentos;
 
-28.3.	Páginas;
+        28.3.	Páginas;
 
-28.4.	Frases chave;
+        28.4.	Frases chave;
 
-28.5.	Entidades;
+        28.5.	Entidades;
 
-28.6.	Detalhes da imagem;
+        28.6.	Detalhes da imagem;
 
-28.7.	Referências de imagem.
+        28.7.	Referências de imagem.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/558ae2ab-ae19-421f-886a-dabb29edf942)
  
@@ -370,7 +407,12 @@ Gere legendas de imagens	 	legenda da imagem
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/433fb820-2454-4667-a8a6-02fa7483dfbd)
 
-Consultando o índice
+<h3>
+  <strong>
+ Consultando o índice
+  </strong>
+</h3>
+
 
 Use o Search Explorer para escrever e testar consultas. O explorador de pesquisa é uma ferramenta incorporada no portal do Azure que oferece uma maneira fácil de validar a qualidade do seu índice de pesquisa. Você pode usar o Search Explorer para escrever consultas e revisar resultados em JSON.
 
@@ -390,44 +432,49 @@ Use o Search Explorer para escrever e testar consultas. O explorador de pesquisa
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/1509de4a-22d3-4d26-be4f-9312b0d264fb)
 
-41.1.	No campo do editor de consultas JSON(JSON query editor), altere para:
+        41.1.	No campo do editor de consultas JSON(JSON query editor), altere para:
 
-{
-    "search": "*",
-    "count": true
-}
+        {
+         "search": "*",
+         "count": true
+        }
 
-41.2.	Selecione Pesquisar(Search). A consulta de pesquisa retorna todos os documentos no índice de pesquisa, incluindo uma contagem de todos os documentos no campo @odata.count. O índice de pesquisa deve retornar um documento JSON contendo os resultados da pesquisa.
+        41.2.	Selecione Pesquisar(Search). A consulta de pesquisa retorna todos os documentos no índice de pesquisa, incluindo uma contagem de todos os documentos no campo @odata.count. O índice de pesquisa deve retornar um documento JSON contendo os resultados da pesquisa.
 
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/75305f2e-8d76-4c95-8025-d512772866c1)
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/3095bfa7-af8c-46c9-8a4e-a031c01f8780)
 
-41.3.	Agora vamos filtrar por localização. No campo do editor de consultas JSON(JSON query editor), altere para:
+        41.3.	Agora vamos filtrar por localização. No campo do editor de consultas JSON(JSON query editor), altere para:
 
-{
- "search": "locations:'Chicago'",
- "count": true
-}
+        {
+         "search": "locations:'Chicago'",
+         "count": true
+        }
 
-41.4.	Selecione Pesquisar(Search). A consulta pesquisa todos os documentos no índice e filtra revisões com localização em Chicago. Você deve ver 3 no campo @odata.count.
+        41.4.	Selecione Pesquisar(Search). A consulta pesquisa todos os documentos no índice e filtra revisões com localização em Chicago. Você deve ver 3 no campo @odata.count.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/fb32c7ef-eebd-40fc-98dd-29c1946e1397)
 
-41.5.	Agora vamos filtrar por sentimento. No campo do editor de consultas JSON(JSON query editor), altere para:
+        41.5.	Agora vamos filtrar por sentimento. No campo do editor de consultas JSON(JSON query editor), altere para:
 
-{
- "search": "sentiment:'negative'",
- "count": true
-}
+        {
+         "search": "sentiment:'negative'",
+         "count": true
+        }
 
-41.6.	Selecione Pesquisar. A consulta pesquisa todos os documentos no índice e filtra revisões com sentimento negativo. Você deve ver 1no campo @odata.count.
+        41.6.	Selecione Pesquisar. A consulta pesquisa todos os documentos no índice e filtra revisões com sentimento negativo. Você deve ver 1no campo @odata.count.
  
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/0bb47c9d-3908-4131-86e8-0260f5b01531)
 
 42.	Os resultados são classificados pelo campo @search.score. Esta é a pontuação atribuída pelo mecanismo de pesquisa para mostrar o quão próximos os resultados correspondem à consulta fornecida.
 
-Revisando o armazenamento de conhecimento
+<h3>
+  <strong>
+ Revisando o armazenamento de conhecimento
+  </strong>
+</h3>
+
 
 Agora vamos ver o poder do armazenamento de conhecimento em ação. Ao executar o assistente Importar dados, você também criou um armazenamento de conhecimento. Dentro do armazenamento de conhecimento, você encontrará os dados enriquecidos extraídos pelas habilidades de IA que persistem na forma de projeções e tabelas.
 
@@ -439,37 +486,56 @@ Agora vamos ver o poder do armazenamento de conhecimento em ação. Ao executar 
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/5175b1b4-5cf8-49f0-9f60-3fd7fe4f4305)
 
-44.1.	Selecione o contêiner privado que você criou.
+        44.1.	Selecione o contêiner privado que você criou.
 
 ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/955cc357-e7a6-4471-b295-0274f7746f3e)
  
-44.2.	Selecione qualquer um dos itens e clique no arquivo objectprojection.json.
+        44.2.	Selecione qualquer um dos itens e clique no arquivo objectprojection.json.
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/985f5299-1d2e-416e-b3c1-bd6a69656ae9)
  
-44.3.	Selecione Editar para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/1bb1037a-15f8-4741-a22d-dbb91004afa6)
+
+        44.3.	Selecione Editar para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
  
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/45a5023a-1a34-4bb1-8923-a0848885f3fc)
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/4d9863ab-1a19-4b2f-9bdc-445d9d24b685)
+
+        44.4.	Agora volte para a tela da conta de armazenamento Containers. Selecione o contêiner (nome-do-conteiner)-image-projection. 
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/fd5786e4-3325-4155-8b38-ff822c52b5c1)
+
+        44.5.	Selecione qualquer um dos itens.
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/c0c71519-cebc-4454-9bb3-6ee277e6a363)
  
 
-44.4.	Agora volte para a tela da conta de armazenamento Containers. Selecione o contêiner (nome-do-conteiner)-image-projection. 
+        44.6.	Selecione qualquer um dos arquivos .jpg . Selecione Editar para ver a imagem armazenada no documento. Observe como todas as imagens dos documentos são armazenadas desta forma.
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/07166b47-1d3e-49c5-8cf1-8c97612bec30)
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/82d2767d-4653-4690-9481-a9dfd5f12a09)
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/ed86c645-4055-4762-a647-4f3ba781983d)
+
+        44.7.	Agora volte para a tela da conta de armazenamento Containers. Selecione Navegador de armazenamento(Storage browser) no painel esquerdo.
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/8899e89a-5a9d-4446-8967-208ad9a0c32f)
+ 
+        44.8.	selecione Tabelas(Tables). Há uma tabela para cada entidade no índice. Selecione a tabela (nome-tabela)KeyPhrases.
+ 
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/0f27a0d9-451d-4a1c-b801-932dfc171c0d)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/26fd0c33-92ba-4d33-b241-c879707a8560)
+
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/3f475974-c1b6-48c3-8420-85e1b0d0a71c)
+
  
 
-44.5.	Selecione qualquer um dos itens.
- 
+        44.9.	Podemos observar as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo das avaliações. Muitos dos campos são chaves, portanto você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
 
-44.6.	Selecione qualquer um dos arquivos .jpg . Selecione Editar para ver a imagem armazenada no documento. Observe como todas as imagens dos documentos são armazenadas desta forma.
- 
- 
- 
-
-44.7.	Agora volte para a tela da conta de armazenamento Containers. Selecione Navegador de armazenamento(Storage browser) no painel esquerdo.
- 
-44.8.	selecione Tabelas(Tables). Há uma tabela para cada entidade no índice. Selecione a tabela (nome-tabela)KeyPhrases.
- 
-
- 
-
- 
-
-44.9.	Podemos observar as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo das avaliações. Muitos dos campos são chaves, portanto você pode vincular as tabelas como um banco de dados relacional. O último campo mostra as frases-chave que foram extraídas pelo conjunto de habilidades.
+![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6c5ccf30-8d7a-425a-8163-0a60375a296e)
  
 
 45.	Observamos que a IA faz um link com uma automação e partir disso ela direciona os dados para um repositório. A partir disso podemos realizar pesquisas no próprio Explorador de pesquisa(Search explorer) usando a automação, ou desenvolver isso para usar em alguma aplicação. Essas ferramentas podem trazer resultados de forma rápida e precisa com base na pesquisa que vamos fazer.
