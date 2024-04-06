@@ -305,12 +305,15 @@ Depois de armazenar os documentos, você poderá usar o Azure AI Search para ext
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/6ab8edc2-1eed-48b9-b539-cc26c990aa1b)
 
         27.5.	Selecione os seguintes campos enriquecidos:
-Habilidade Cognitiva	Parâmetro	Nome do campo
-Extraia nomes de locais	 	Localizações
-Extraia frases-chave	 	frases chave
-Detectar sentimento	 	sentimento
-Gerar tags de imagens	 	imagemTags
-Gere legendas de imagens	 	legenda da imagem
+
+  | Habilidade Cognitiva | Parâmetro | Nome do Grupo |
+  |:---------|:------------:|--------:|
+  | Extraia nomes de locais  |           |  Localizações |
+  | Extraia frases-chave  |           |  Frases chave |
+  | Detectar sentimento   |           |  Sentimento    |
+  | Gerar tags de imagens  |           |  ImagemTags    |
+  | Gere legendas de imagens  |           |  Legenda da imagem   |
+
  
  ![image](https://github.com/LeandroLanger/laboratorio_AI_900/assets/114670890/1e7b9c49-a973-4fc5-8b49-eaf72758fbde)
 
